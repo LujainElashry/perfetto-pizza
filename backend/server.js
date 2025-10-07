@@ -16,7 +16,7 @@ dotenv.config();
 // ----------------------------
 // Connect to MongoDB
 // ----------------------------
-connectDB();
+connectDB(); 
 
 // ----------------------------
 // Initialize express app
@@ -28,7 +28,7 @@ const app = express();
 // ----------------------------
 app.use(
   cors({
-  origin: process.env.CLIENT_URL,
+    origin: process.env.CLIENT_URL,
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -45,9 +45,8 @@ app.use(express.urlencoded({ extended: true }));
 // ----------------------------
 app.use(helmet());
 
-
 // ----------------------------
-// 5. Development Request Logger
+// 4. Development Request Logger
 // ----------------------------
 if (process.env.NODE_ENV === "development") {
   app.use((req, res, next) => {
@@ -57,7 +56,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // ----------------------------
-// 6. Routes
+// 5. Routes
 // ----------------------------
 app.use("/pizzas", require("./routes/pizzaRoutes"));
 app.use("/users", require("./routes/userRoutes"));
