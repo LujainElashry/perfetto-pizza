@@ -151,7 +151,7 @@ npm start
 ---
 **Live Demo**
 
-Full website: https://your-frontend-live-url.com](https://perfetto-pizza-f976hzrjv-lujain-elashrys-projects.vercel.app/
+Full website: https://perfetto-pizza-f976hzrjv-lujain-elashrys-projects.vercel.app/
 ---
 
 ## 📌 API Endpoints (Example)
