@@ -36,9 +36,9 @@ export default function Menu() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "price-low":
-          return a.unitPrice - b.unitPrice;
+          return a.price - b.price;
         case "price-high":
-          return b.unitPrice - a.unitPrice;
+          return b.price - a.price;
         case "name":
         default:
           return a.name.localeCompare(b.name);
