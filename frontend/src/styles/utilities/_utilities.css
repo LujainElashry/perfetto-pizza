@@ -1,0 +1,291 @@
+/* ===== UTILITY CLASSES ===== */
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Dimensions */
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Margin Bottom */
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mb-xxl {
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* Margin Top */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+  margin-top: var(--spacing-xl);
+}
+
+/* Padding */
+.p-0 {
+  padding: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Display */
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Flex Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Grid Utilities */
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Page Section  */
+.page-section {
+  padding: 20px 30px 20px 30px;
+  background: var(--cream-white);
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header h2 {
+  font-size: 3rem;
+  color: var(--primary-red-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+}
+
+.header-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-red), var(--crust-gold));
+  border-radius: 2px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.page-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+.page-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+/* Container Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding-x);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding-x);
+}
+
+.container-full {
+  width: 100%;
+  margin: 0;
+  padding: 0 var(--container-padding-x);
+}
+
+.header-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-red), var(--crust-gold));
+  border-radius: 2px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.page-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/* ===== ABOUT PAGE ===== */
+.page-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.mission-statement {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--spacing-xxl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(231, 76, 60, 0.3);
+}
+
+.mission-statement h3 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--white);
+}
+
+.mission-statement p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--white);
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xxl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Contact Form */
+.contact-form-section {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xxl);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: var(--hover);
+}
+
+.contact-form h3 {
+  font-size: 1.8rem;
+  color: var(--charcoal);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 700;
+}
+
+.contact-form .btn {
+  width: 100%;
+  margin-top: var(--spacing-md);
+}

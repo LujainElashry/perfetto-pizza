@@ -1,0 +1,157 @@
+/* Footer.css */
+.footer {
+  margin-top: 30px;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient-dark);
+  color: var(--cream-white);
+  font-family: var(--font-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pizza watermark */
+.footer::before {
+  content: "🍕";
+  position: absolute;
+  font-size: 6rem;
+  opacity: 0.04;
+  top: 1rem;
+  right: 6%;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+/* Gold highlight line */
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--crust-gold),
+    transparent
+  );
+}
+
+/* Footer messages */
+.footer-message-container {
+  text-align: center;
+   justify-content: center; /* center horizontally */
+  align-items: center; 
+  margin-bottom: 2rem;
+}
+.footer-message {
+  display: flex; /* change from inline-block to flex */
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  text-align: center;      /* center text */
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: 1px dashed var(--crust-gold-dark);
+  transition: all var(--transition-base);
+  font-weight: 600;
+  margin: 0 auto;          /* ensures centering if inside block container */
+  max-width: 520px;        /* optional: limit width */
+}
+
+
+.footer-message.open {
+    text-align: center;
+  background: var(--charcoal);
+  color: var(--crust-gold);
+}
+
+.footer-message.closed {
+    text-align: center;
+  background: var(--charcoal-dark);
+  color: var(--crust-gold-light);
+}
+
+.footer-message:hover {
+    text-align: center;
+  transform: translateY(-2px);
+}
+
+/* Footer content grid */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+/* Section titles */
+.footer-section h4 {
+  color: var(--crust-gold);
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--crust-gold);
+  margin-top: 0.4rem;
+  opacity: 0.6;
+}
+
+/* Links and text */
+.footer-section p,
+.footer-section a {
+  color: var(--cream-white);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+  display: block;
+  transition: color var(--transition-base), transform 0.2s;
+}
+
+.footer-section a:hover {
+  color: var(--crust-gold);
+  transform: translateX(4px);
+}
+
+/* Bottom line */
+.footer-bottom {
+  border-top: 1px solid var(--charcoal);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  color: var(--cream-white);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section h4::after {
+    margin: 0.4rem auto 0;
+  }
+
+  .footer-message {
+      text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}

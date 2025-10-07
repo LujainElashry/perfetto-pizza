@@ -1,0 +1,29 @@
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-lg);
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+  margin-bottom: var(--spacing-xl);
+}
+h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--spacing-lg);
+}
+h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--spacing-md);
+}
+h4 {
+  font-size: var(--fs-md);
+}

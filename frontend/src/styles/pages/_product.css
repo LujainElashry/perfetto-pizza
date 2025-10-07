@@ -1,0 +1,660 @@
+/* ==========================
+   🌟 Admin Manage Pizzas Page
+   ========================== */
+
+.admin-products {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #fff9f7, var(--white));
+  min-height: 100vh;
+}
+
+/* Add New Pizza Button */
+.admin-products .admin-actions {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 50px;
+}
+
+.admin-products .add-pizza-btn {
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-products .add-pizza-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(231, 76, 60, 0.4);
+}
+
+.admin-products .add-pizza-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ==========================
+   🧾 Admin Form Card
+   ========================== */
+
+.admin-products .admin-form-card {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--primary-red);
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-products .admin-form-card h3 {
+  font-size: 2rem;
+  color: var(--charcoal);
+  margin-bottom: 35px;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.admin-products .admin-form-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.admin-products .form-grid-admin {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 35px;
+}
+
+.admin-products .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-products .form-group-full {
+  grid-column: 1 / -1;
+}
+
+.admin-products .form-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.admin-products .form-group input,
+.admin-products .form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.admin-products .form-group input:focus,
+.admin-products .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+  background: var(--white);
+}
+
+.admin-products .form-group input[type="file"] {
+  padding: 12px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.admin-products .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.admin-products .image-preview {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-products .image-preview img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--lighter-grey);
+}
+
+.admin-products .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.admin-products .checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-red);
+}
+
+.admin-products .checkbox-label span {
+  font-size: 1rem;
+}
+
+/* Form Actions */
+.admin-products .form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.admin-products .btn-primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(231, 76, 60, 0.3);
+}
+
+.admin-products .btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.4);
+}
+
+.admin-products .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-products .btn-secondary {
+  background: var(--lighter-grey);
+  color: var(--charcoal);
+  padding: 14px 36px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-products .btn-secondary:hover {
+  background: #e0e0e0;
+  border-color: #ccc;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   🍕 Admin Table
+   ========================== */
+
+.admin-table-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  background: var(--white);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background: var(--gradient-primary);
+}
+
+.admin-table th {
+  text-align: center;
+  padding: 20px 16px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-table tbody td {
+  padding: 20px 16px;
+  font-size: 1rem;
+  color: var(--charcoal);
+  border-bottom: 1px solid #f5f5f5;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.admin-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #fff9f7;
+  transform: scale(1.01);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-name {
+  font-weight: 700;
+  color: var(--charcoal);
+  font-size: 1.05rem;
+}
+
+/* Status Badges */
+.admin-products .status-badge {
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.admin-products .status-available {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+
+.admin-products .status-soldout {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--primary-red);
+}
+
+/* Action Buttons */
+.table-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.btn-icon {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.admin-products .btn-edit {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.admin-products .btn-edit:hover {
+  background: #3498db;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.admin-products .btn-delete {
+  width: 100%;
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--primary-red);
+  padding: 8px 18px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.admin-products .btn-delete:hover {
+  background: var(--primary-red);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px #e74c3c59;
+}
+
+.admin-products .btn-delete:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px #e74c3c40;
+}
+
+/* Delete Icon */
+.delete-fill {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23e74c3c' d='M20 5a1 1 0 1 1 0 2h-1l-.003.071l-.933 13.071A2 2 0 0 1 16.069 22H7.93a2 2 0 0 1-1.995-1.858l-.933-13.07L5 7H4a1 1 0 0 1 0-2zm-6-3a1 1 0 1 1 0 2h-4a1 1 0 0 1 0-2z'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.admin-products .btn-delete:hover .delete-fill {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+/* Edit Icon (optional enhancement) */
+.edit-icon {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233498db' d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.admin-products .btn-edit:hover .edit-icon {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/* ==========================
+   📱 RESPONSIVE DESIGN
+   ========================== */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .admin-products {
+    padding: 40px 15px;
+  }
+
+  .admin-products .admin-form-card {
+    padding: 40px 30px;
+  }
+
+  .admin-products .form-grid-admin {
+    gap: 20px;
+  }
+
+  .admin-table-container {
+    overflow-x: auto;
+  }
+
+  .admin-table {
+    min-width: 900px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .admin-products .page-header h2 {
+    font-size: 2rem;
+  }
+
+  .admin-products .add-pizza-btn {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+
+  .admin-products .admin-form-card {
+    padding: 30px 20px;
+    border-width: 2px;
+  }
+
+  .admin-products .admin-form-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .admin-products .form-grid-admin {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .admin-products .form-group-full {
+    grid-column: 1;
+  }
+
+  .admin-products .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-products .btn-primary,
+  .admin-products .btn-secondary {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 14px 10px;
+    font-size: 0.85rem;
+  }
+
+  .table-name {
+    font-size: 0.95rem;
+  }
+
+  .btn-icon {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .admin-products .btn-delete {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .delete-fill {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .admin-products {
+    padding: 30px 10px;
+  }
+
+  .admin-products .page-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .admin-products .header-underline {
+    width: 70px;
+    height: 3px;
+  }
+
+  .admin-products .add-pizza-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+
+  .admin-products .admin-form-card {
+    padding: 25px 15px;
+    border-radius: 16px;
+  }
+
+  .admin-products .admin-form-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .admin-products .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .admin-products .form-group input,
+  .admin-products .form-group textarea {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .admin-products .image-preview img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .admin-products .btn-primary,
+  .admin-products .btn-secondary {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .admin-table-container {
+    border-radius: 16px;
+    margin: 0 -10px;
+  }
+
+  .admin-table {
+    min-width: 700px;
+  }
+
+  .admin-table th {
+    padding: 12px 8px;
+    font-size: 0.75rem;
+  }
+
+  .admin-table td {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+
+  .admin-table td img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .table-actions {
+    width: 100px;
+  }
+
+  .btn-icon {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .admin-products .btn-delete {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .admin-products .status-badge {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .admin-products .page-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .admin-products .add-pizza-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .admin-products .admin-form-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .admin-table {
+    min-width: 650px;
+  }
+}
+
+/* Hover Effects - Disable on Touch Devices */
+@media (hover: none) {
+  .admin-products .btn-edit:hover,
+  .admin-products .btn-delete:hover,
+  .admin-products .btn-primary:hover,
+  .admin-products .btn-secondary:hover,
+  .admin-products .add-pizza-btn:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,174 @@
+.btn {
+  align-items: center;
+  display: inline-flex;
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  min-height: 48px;
+  min-width: 150px;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: var(--white);
+  box-shadow: 0 4px 14px var(--dark-washed-red);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--dark-washed-red);
+}
+
+.btn-secondary {
+  background-color: var(--basil-green);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--basil-green-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+  min-width: auto;
+  min-height: 0;
+}
+
+/* Cart Icon Button */
+.btn-cart-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  color: var(--primary-red);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.btn-cart-icon:hover {
+  background: var(--primary-red-dark);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px var(--dark-washed-red);
+}
+
+.mdi--cart {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e74c3c' d='M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2'/%3E%3C/svg%3E");
+  transition: all var(--transition-base);
+}
+
+.btn-cart-icon:hover .mdi--cart {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2'/%3E%3C/svg%3E");
+}
+
+/* ======================== */
+/* RESPONSIVE BUTTONS       */
+/* ======================== */
+
+/* Tablet: ≤1024px */
+@media (max-width: 1024px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-width: 120px;
+    min-height: 42px;
+  }
+
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .btn-cart-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .mdi--cart {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Mobile: ≤768px */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    min-width: 100px;
+    min-height: 40px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .btn-cart-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mdi--cart {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Very small screens: ≤480px */
+@media (max-width: 480px) {
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    min-width: 90px;
+    min-height: 36px;
+  }
+
+  .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .btn-cart-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mdi--cart {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,345 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 600px;
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hero-text .btn {
+  margin-top: 1rem;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Tablets / Laptops (≤1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 3rem 4rem;
+    gap: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 450px;
+  }
+}
+
+/* Tablets / Mobile (≤768px) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image img {
+    width: 350px;
+  }
+
+  .hero-text .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    width: 280px;
+  }
+
+  .hero-text .btn {
+    max-width: 100%;
+  }
+}
+
+/* Popular Pizzas Section */ /* ===== POPULAR PIZZA SECTION ===== */
+.popular {
+  padding: var(--spacing-xl) var(--container-padding-x);
+  background: var(--cream-white);
+  text-align: center;
+}
+
+.popular h2 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-red-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.popular > p {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xxl);
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+/* Pizza Grid */
+.pizza-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Pizza Item */
+.pizza-item {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: var(--hover);
+}
+
+.pizza-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-red);
+}
+
+.pizza-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.pizza-item:hover img {
+  transform: scale(1.08);
+}
+
+.pizza-item > div {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.pizza-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--charcoal);
+  font-weight: 700;
+}
+
+.pizza-item p {
+  font-size: 1rem;
+  color: var(--medium-grey);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.pizza-item .price-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-top: auto;
+}
+
+.pizza-item .price {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--charcoal);
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  transition: all var(--transition-base);
+  letter-spacing: 0.5px;
+}
+
+.pizza-item:hover .price {
+  color: var(--primary-red);
+  transform: scale(1.08);
+}
+
+/* Sold Out Overlay */
+.pizza-item.sold-out {
+  opacity: 0.65;
+  position: relative;
+}
+
+.pizza-item.sold-out::after {
+  content: "SOLD OUT";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.pizza-item.sold-out .price-cart-container span {
+  background: rgba(189, 195, 199, 0.2);
+  color: var(--light-gray);
+}
+
+.pizza-item.sold-out:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== RESPONSIVE POPULAR PIZZA ===== */
+
+/* Large Tablets / Laptops */
+@media (max-width: 1024px) {
+  .pizza-item img {
+    height: 220px;
+  }
+
+  .pizza-item h2 {
+    font-size: 2.5rem;
+  }
+  .pizza-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .pizza-item .price {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets / Mobile */
+@media (max-width: 768px) {
+  .pizza-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .pizza-item img {
+    height: 200px;
+  }
+  .pizza-item h2 {
+    font-size: 2rem;
+  }
+
+  .pizza-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .pizza-item p {
+    font-size: 0.95rem;
+  }
+
+  .pizza-item .price {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .pizza-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .pizza-item img {
+    height: 180px;
+  }
+
+  .pizza-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .pizza-item p {
+    font-size: 0.9rem;
+  }
+
+  .pizza-item .price {
+    font-size: 1.3rem;
+  }
+}

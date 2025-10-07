@@ -1,0 +1,108 @@
+/* ===================================
+              VARIABLES 
+   =================================== */
+:root {
+  /* Primary Colors */
+  --primary-red: #e74c3c;
+  --primary-red-dark: #c0392b;
+  --primary-red-darker: #a93226;
+  --dark-washed-red: #e74c3c33;
+
+  /* Secondary Colors */
+  --cream-white: #fef3e2;
+  --crust-gold: #d4a574;
+  --crust-gold-dark: #b8956a;
+  --bright-orange: #ff8225;
+  --basil-green: #27ae60;
+  --basil-green-dark: #229954;
+
+  /* Neutral Colors */
+  --charcoal: #43362c;
+  --cocoa: #4c3218;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-grey: #666;
+  --medium-grey: #7f8c8d;
+  --light-gray: #95a5a6;
+  --lighter-grey: #ecf0f1;
+  --lightest-grey: #f8f9fa;
+  --off-white: #fafafa;
+
+  /* Status Colors */
+  --status-pending: #f39c12;
+  --status-pending-bg: #f1c40f33;
+  --status-preparing: #2980b9;
+  --status-preparing-bg: #3498db33;
+  --status-delivering: #8e44ad;
+  --status-delivering-bg: #9b59b633;
+  --status-delivered: var(--basil-green);
+  --status-delivered-bg: #27ae6033;
+  --status-cancelled: var(--primary-red);
+  --status-cancelled-bg: #e74c3c33;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary-red),
+    var(--primary-red-dark)
+  );
+
+  --gradient-dark: linear-gradient(
+    160deg,
+    var(--cocoa) 0%,
+    var(--charcoal) 100%
+  );
+
+  /* Typography */
+  --font-primary: "Poppins", "Arial", sans-serif;
+  --font-secondary: "Roboto", "Helvetica", sans-serif;
+
+  /* Font Sizes - Responsive */
+  --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.85rem);
+  --fs-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.05rem);
+  --fs-md: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
+  --fs-lg: clamp(1.4rem, 1.2rem + 1vw, 1.8rem);
+  --fs-xl: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem);
+  --fs-xxl: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
+
+  /* Spacing System */
+  --spacing-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 0.6rem + 0.75vw, 1rem);
+  --spacing-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --spacing-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --spacing-xxl: clamp(3rem, 2rem + 5vw, 4rem);
+  --spacing-xxxl: clamp(4rem, 3rem + 5vw, 6rem);
+
+  /* Container spacing */
+  --container-padding-x: clamp(1rem, 2vw, 2rem);
+  --container-padding-y: clamp(2rem, 3vw, 4rem);
+  --section-spacing: clamp(3rem, 4vw, 5rem);
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 50px;
+  --radius-xl: 24px;
+  --radius-round: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(44, 62, 80, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 62, 80, 0.12);
+  --shadow-lg: 0 8px 32px rgba(44, 62, 80, 0.16);
+  --shadow-hover: 0 12px 40px rgba(231, 76, 60, 0.2);
+  --hover: 2px solid rgba(231, 76, 60, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-modal: 1000;
+  --z-tooltip: 1500;
+}
