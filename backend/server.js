@@ -28,7 +28,10 @@ const app = express();
 // ----------------------------
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin:[
+"http://localhost:3000",
+"https://perfetto-pizza-f976hzrjv-lujain-elashrys-projects.vercel.app",
+    ] ,
     credentials: true,
     optionsSuccessStatus: 200,
   })
